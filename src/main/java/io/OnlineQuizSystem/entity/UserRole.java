@@ -1,14 +1,35 @@
 package io.OnlineQuizSystem.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name="UserRole")
 public class UserRole {
+    public Long getUserRoleId() {
+        return userRoleId;
+    }
+
+    public void setUserRoleId(Long userRoleId) {
+        this.userRoleId = userRoleId;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userRoleId;
