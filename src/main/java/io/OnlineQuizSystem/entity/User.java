@@ -18,6 +18,10 @@ public class User {
     private String firstname;
     private String lastname;
     private String email;
+    private String phone;
+    private boolean enabled=true;
+    private String profile;
+
 
     public Long getId() {
         return id;
@@ -98,11 +102,6 @@ public class User {
     public void setUserRoles(Set<UserRole> userRoles) {
         this.userRoles = userRoles;
     }
-
-    private String phone;
-    private boolean enabled=true;
-    private String profile;
-
 
     @OneToMany(cascade = CascadeType.ALL,fetch =  FetchType.EAGER,mappedBy = "user")
     @JsonIgnore

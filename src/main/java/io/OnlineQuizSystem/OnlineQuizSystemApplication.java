@@ -24,26 +24,26 @@ public class OnlineQuizSystemApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("Starting code");
 
-		User user = new User();
-
-		user.setFirstname("Yash");
-		user.setLastname("Khurram");
-		user.setEmail("yash@gmail.com");
-		user.setPhone("1122292");
-		user.setUsername("Yxshgarg");
-		user.setProfile("Default");
-
-		Role role = new Role();
-		role.setRoleId(44L);
-		role.setRoleName("ADMIN");
-
-		Set<UserRole> userRoles = new HashSet<>();
-		UserRole userRole = new UserRole();
-		userRole.setRole(role);
-		userRole.setUser(user);
-		userRoles.add(userRole);
-
-		User user1= this.userService.createUser(user,userRoles);
-		System.out.println(user1.getUsername());
+//		User user = new User();
+//
+//		user.setFirstname("Yash");
+//		user.setLastname("Khurram");
+//		user.setEmail("yash@gmail.com");
+//		user.setPhone("1122292");
+//		user.setUsername("Yxshgarg");
+//		user.setProfile("Default");
+//
+//		Role role = new Role();
+//		role.setRoleId(44L);
+//		role.setRoleName("ADMIN");
+//
+//		Set<UserRole> userRoles = new HashSet<>();
+//		UserRole userRole = new UserRole();
+//		userRole.setRole(role);
+//		userRole.setUser(user);
+//		userRoles.add(userRole);
+//
+//		User user1= this.userService.createUser(user,userRoles);
+//		System.out.println(user1.getUsername());
 	}
 }
