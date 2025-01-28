@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User createUser(User user, Set<UserRole> userRoles) throws Exception {
+        user.setProfile("default.png");
         User local = this.userRepository.findByUsername(user.getUsername());
         if(local!=null){
             System.out.println("User is already there");
